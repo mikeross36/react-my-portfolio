@@ -1,0 +1,12 @@
+.footer {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    text-align: center;
+
+    &-title {
+        font-size: 1rem;
+        color: #fff;
+        text-shadow: $textShadow;
+    }
+}

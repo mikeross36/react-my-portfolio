@@ -1,0 +1,113 @@
+.social-icons {
+    position: absolute;
+    top: 5%;
+    left: 1.5rem;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .5s ease;
+
+    @include breakpoint-up(medium){
+        left: 10rem;
+        top: 20%;
+    }
+
+    & ul {
+        position: relative;
+        display: flex;
+        transform-style: preserve-3d;
+
+        & li {
+            position: relative;
+            list-style: none;
+            width: 3rem;
+            height: 3rem;
+            margin: .6rem 1rem;
+
+            @include breakpoint-up(large){
+                width: 4rem;
+                height: 4rem;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                left: -5px;
+                width: 100%;
+                height: 10px;
+                transform-origin: top;
+                transform: skewX(-41deg);
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top:5px;
+                left: -9px;
+                width: 9px;
+                height: 100%;
+                transform-origin: right;
+                transform: skewY(-49deg);
+            }
+
+            & span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex !important;
+                background: $activeClr;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-size: 2rem !important;
+                transition: 1s ease-out;
+                border-radius: 50%;
+                filter: drop-shadow(-.15rem .15rem .1rem $mainGrey);
+
+                @include breakpoint-up(large) {
+                    font-size: 2.3rem !important;
+                }
+            }
+
+            &:hover span {
+                z-index: 1000;
+                transition: .3s;
+                color: $activeClr;
+            }
+
+            &:hover span:nth-child(5){
+                background: $mainWhite;
+                transform: translateX(40px);
+                opacity: 1;
+            }
+
+            &:hover span:nth-child(4){
+                background: $mainWhite;
+                transform: translateX(30px);
+                opacity: .8;
+            }
+
+            &:hover span:nth-child(3){
+                background: $mainWhite;
+                transform: translateX(20px);
+                opacity: .6;
+            }
+
+            &:hover span:nth-child(2){
+                background: $mainWhite;
+                transform: translateX(10px);
+                opacity: .4;
+            }
+
+            &:hover span:nth-child(1){
+                background: $mainWhite;
+                transform: translateX(0px);      
+                opacity: .2;
+            }
+        }
+    }
+}
