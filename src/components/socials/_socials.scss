@@ -1,3 +1,6 @@
+@use "../../style/mixins";
+@use "../../style/variables" as *;
+
 .social-icons {
     position: absolute;
     top: 5%;
@@ -8,7 +11,7 @@
     align-items: center;
     transition: all .5s ease;
 
-    @include breakpoint-up(medium){
+    @include mixins.breakpoint-up(medium){
         left: 10rem;
         top: 20%;
     }
@@ -25,7 +28,7 @@
             height: 3rem;
             margin: .6rem 1rem;
 
-            @include breakpoint-up(large){
+            @include mixins.breakpoint-up(large){
                 width: 4rem;
                 height: 4rem;
             }
@@ -68,7 +71,7 @@
                 border-radius: 50%;
                 filter: drop-shadow(-.15rem .15rem .1rem $mainGrey);
 
-                @include breakpoint-up(large) {
+                @include mixins.breakpoint-up(large) {
                     font-size: 2.3rem !important;
                 }
             }

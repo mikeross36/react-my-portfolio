@@ -1,3 +1,6 @@
+@use "../../style/mixins";
+@use "../../style/variables" as *;
+
 .projects-wrapper {
     width: 100%;
     height: 100%;
@@ -16,7 +19,7 @@
         justify-content: flex-end;
         box-shadow: $boxShadow;
     
-        @include breakpoint-up(medium){
+        @include mixins.breakpoint-up(medium){
             height: 70vh;
             max-width: 80vw;
             margin: 0 auto;
@@ -44,7 +47,7 @@
         grid-gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 
-        @include breakpoint-up(medium){
+        @include mixins.breakpoint-up(medium){
             max-width: 80vw;
         }
 
@@ -55,7 +58,7 @@
             cursor: pointer;
             position: relative;
         
-            @include breakpoint-up(medium){
+            @include mixins.breakpoint-up(medium){
                 border-bottom: 1rem solid $activeClr;
             }
         

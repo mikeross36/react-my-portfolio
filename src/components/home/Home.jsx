@@ -18,12 +18,12 @@ const Home = () => {
                     initial="initial"
                 animate="withMotion">
                 </motion.div>
-                <motion.h3 className="title"
+                <motion.h2 className="title"
                     variants={titleVariants}
                     initial="initial"
                 animate="withMotion">
                     front-end developer
-                </motion.h3>
+                </motion.h2>
             </div>
             <Footer />
         </section>
